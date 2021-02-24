@@ -15,5 +15,11 @@ def main():
 
     print(a, b, c)
 
+    if c == 'add':
+        print(a + b)
+    else:
+        print(a * b)
+
+
 if __name__ == '__main__':
     main()
