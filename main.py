@@ -17,5 +17,8 @@ def main():
 
     print(a, b, c)
 
+    assert 3 == myadd(1, 2), '1+2 is not 3'
+    
+
 if __name__ == '__main__':
     main()
