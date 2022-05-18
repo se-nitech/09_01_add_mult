@@ -1,3 +1,5 @@
+import pytest
+
 def myadd(a, b):
 
     if a > 0 and b > 0:
@@ -44,23 +46,35 @@ def mymult(a, b):
     return -100
 
 
-def test_myadd_eq():
+@pytest.mark.parametrize(
+    ("a", "b", "c"), [
+        (1, 2, 3),
+        (0, 6, 6),
+        (2, 0, 2),
+    ])
+def test_myadd_eq(a, b, c):
 
-    assert myadd(1, 2) == 3
-    assert myadd(0, 6) == 6
-    assert myadd(2, 0) == 2
-
-
-def test_myadd_lt():
-
-    assert myadd(-2, -6) < 0
-    assert myadd(1, -4) < 0
+    assert myadd(a, b) == c
 
 
-def test_myadd_gt():
+@pytest.mark.parametrize(
+    ("a", "b"), [
+        (-2, -6),
+        (1, -4),
+    ])
+def test_myadd_lt(a, b):
 
-    assert myadd(2, 6) > 0
-    assert myadd(4, -1) > 0
+    assert myadd(a, b) < 0
+
+
+@pytest.mark.parametrize(
+    ("a", "b"), [
+        (2, 6),
+        (4, -1),
+    ])
+def test_myadd_gt(a, b):
+
+    assert myadd(a, b) > 0
 
 
 def test_mymult():
