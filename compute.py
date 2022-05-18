@@ -44,15 +44,23 @@ def mymult(a, b):
     return -100
 
 
-def test_myadd():
+def test_myadd_eq():
 
     assert myadd(1, 2) == 3
-    assert myadd(2, 6) > 0
-    assert myadd(-2, -6) < 0
     assert myadd(0, 6) == 6
     assert myadd(2, 0) == 2
-    assert myadd(4, -1) > 0
+
+
+def test_myadd_lt():
+
+    assert myadd(-2, -6) < 0
     assert myadd(1, -4) < 0
+
+
+def test_myadd_gt():
+
+    assert myadd(2, 6) > 0
+    assert myadd(4, -1) > 0
 
 
 def test_mymult():
