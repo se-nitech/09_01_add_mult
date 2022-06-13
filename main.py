@@ -17,5 +17,8 @@ def main():
 
     print(a, b, c)
 
+    print(myadd(1, 2))
+    
+
 if __name__ == '__main__':
     main()
