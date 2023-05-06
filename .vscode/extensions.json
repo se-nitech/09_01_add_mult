@@ -1,9 +1,11 @@
 {
     "recommendations": [
-        "ms-ceintl.vscode-language-pack-ja",
-        "ms-python.python",
-        "visualstudioexptteam.vscodeintellicode",
         "mhutchie.git-graph",
-        "brainfit.vscode-coverage-highlighter",
+        "ms-ceintl.vscode-language-pack-ja",
+        "ms-python.flake8",
+        "ms-python.pylint",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "visualstudioexptteam.vscodeintellicode",
     ]
 }
