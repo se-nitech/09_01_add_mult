@@ -1,5 +1,6 @@
 import argparse
 
+
 def main():
     parser = argparse.ArgumentParser(description='add or multiply two numbers')
     parser.add_argument('arg1', type=int,
