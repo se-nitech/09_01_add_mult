@@ -1,6 +1,6 @@
 import unittest
 
-from test_add import TestMyAdd
+from test_add_final import TestMyAdd
 from test_mult import TestMyMult
 
 if __name__ == "__main__":

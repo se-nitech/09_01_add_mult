@@ -10,7 +10,5 @@
         "ms-python.vscode-pylance",
         "ms-vscode.live-server",
         "ryanluker.vscode-coverage-gutters",
-        "visualstudioexptteam.vscodeintellicode-completions",
-        "visualstudioexptteam.vscodeintellicode",
     ]
 }

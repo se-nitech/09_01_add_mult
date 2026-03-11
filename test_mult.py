@@ -1,5 +1,5 @@
 import unittest
-from compute import mymult
+from compute_final import mymult
 
 
 class TestMyMult(unittest.TestCase):
