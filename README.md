@@ -24,7 +24,7 @@ docker compose exec mypython python -m unittest test_add.py
 
 ```bash
 docker compose exec mypython python -m unittest test_add_final.py
-docker compose exec mypython python -m coverage run test_add_final.py
+docker compose exec mypython coverage run test_add_final.py
 docker compose exec mypython coverage report
 docker compose exec mypython coverage html
 docker compose exec mypython coverage xml
@@ -33,7 +33,7 @@ docker compose exec mypython coverage xml
 テストスイートの実行
 
 ```bash
-docker compose exec mypython python -m coverage run test_compute.py
+docker compose exec mypython coverage run test_compute.py
 ```
 
 pytestを用いたユニットテスト
