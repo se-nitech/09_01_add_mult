@@ -7,35 +7,24 @@ docker compose build
 docker compose up -d
 ```
 
-assertのサンプルのためにブランチを切り替え
+assertを用いたテスト
 
 ```bash
-docker compose exec mypython git checkout assert
+docker compose exec mypython python assert_add.py
 ```
 
-TDDのサンプルのためにpyunitブランチの最初のコミットをチェックアウト
+unittestを用いたユニットテスト
 
 ```bash
-docker compose exec mypython git checkout e6e3c8852db
-```
-
-TDDのユニットテスト
-
-```bash
+docker compose exec mypython python -m test_add
 docker compose exec mypython python -m unittest test_add.py
-```
-
-カバレッジの計算のためにmainブランチをチェックアウト
-
-```bash
-docker compose exec mypython git checkout main
 ```
 
 カバレッジの計算
 
 ```bash
-docker compose exec mypython python -m unittest test_add.py
-docker compose exec mypython python -m coverage run test_add.py
+docker compose exec mypython python -m unittest test_add_final.py
+docker compose exec mypython python -m coverage run test_add_final.py
 docker compose exec mypython coverage report
 docker compose exec mypython coverage html
 docker compose exec mypython coverage xml
@@ -47,13 +36,11 @@ docker compose exec mypython coverage xml
 docker compose exec mypython python -m coverage run test_compute.py
 ```
 
-結合テストの実行とカバレッジの計算
+pytestを用いたユニットテスト
 
 ```bash
-docker compose exec mypython python -m coverage run test_integration.py
-docker compose exec mypython coverage report
-docker compose exec mypython coverage html
-docker compose exec mypython coverage xml
+docker compose exec mypython pytest test/test_compute1.py
+docker compose exec mypython pytest test/test_compute2.py
 ```
 
 停止
